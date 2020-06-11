@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+<body>
+<section>
+  <div class="container">
+    <form class="ui form">
+      <h2 class="ui dividing header">Add New Post</h2>
+      <div class="two fields">
+      <div class="field">
+        <label>Title</label>
+          <div class="field">
+            <input type="text" name="title" placeholder="titele" [(ngModel)]="blogclass.titele">
+          </div>
+      </div>
+         <div class="field">
+          <label>Author</label>
+          <div class="field">
+            <input type="text" name="author" placeholder="Author" [(ngModel)]="blogclass.author">
+          </div>
+         </div>
+
+      </div>
+      <div class="field">
+        <label>Image link</label>
+        <div class="fields">
+          <div class="twelve wide field">
+            <input type="text" name="imageLink" placeholder="Image link" [(ngModel)]="blogclass.imageLink">
+          </div>
+          <div class="four wide field">
+            <input    type="date" name="date" [ngModel]="blogclass.date|date: 'yyyy-MM-dd'" (ngModelChange)="$event">
+          </div>
+        </div>
+      </div>
+      <div class="two fields">
+        <div class="field">
+          <label>Email</label>
+          <div class="field">
+            <input type="email" name="email" placeholder="email" [(ngModel)]="blogclass.email">
+          </div>
+        </div>
+        <div class="field">
+          <label>Post Type</label>
+          <select class="ui fluid dropdown"  name="blogeType" [(ngModel)]="blogclass.blogeType">
+            <option value="Health">Health</option>
+            <option value="News">News</option>
+            <option value="Sport">Sport</option>
+            <option value="Story">Story</option>
+            <option value="Economy">Economy</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <h4 class="ui dividing header">Billing Information</h4>
+
+      <div class="ui form">
+        <div class="field">
+          <label>Text</label>
+          <textarea name="content" [(ngModel)]="blogclass.content" ></textarea>
+        </div>
+      </div>
+      <br>
+      <div class="field">
+        <button class="ui primary button" (click)="save(blogclass)">Save</button>
+        <button type="reset" class="ui button" style="margin-left: 20px; margin-right: 20px">Discard</button>
+        <button type="submit" class="ui secondary button" routerLink="/blog">Back</button>
+      </div>
+    </form>
+  </div>
+</section>
+</body>
+</html>

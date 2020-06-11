@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>blog</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <!-- ici afichage de notre poste-->
+    <main class="posts-listing col-lg-8">
+      <div class="container">
+        <div class="row">
+          <!-- post             -->
+          <div  *ngFor="let blg of blogList" class="post col-xl-6">
+            <div class="post-thumbnail"><a><img src="{{blg.imageLink}}" alt="..." class="img-fluid"></a></div>
+            <div class="post-details">
+              <div class="post-meta d-flex justify-content-between">
+                <div class="date meta-last">{{blg.date}}</div>
+                <div class="category"><a >{{blg.blogeType}}</a></div>
+              </div><a>
+              <h3 class="h4">{{blg.titele}}</h3></a>
+              <p class="text-muted">{{blg.content}}</p>
+              <div class="post-footer d-flex align-items-center"><a  class="author d-flex align-items-center flex-wrap">
+                <div class="avatar"></div>
+                <div class="title"><span>{{blg.author}}</span></div></a>
+                <div class="date"><i class="fa fa-mail-reply">{{blg.email}}</i></div>
+              </div>
+            </div>
+          </div>
+          <!-- post -->
+
+        </div>
+
+      </div>
+    </main>
+    <aside class="col-lg-4">
+      <div class="text-center"> <button class="positive ui button" routerLink="/blogPost" style="margin-bottom: 20px">Add new blog Post</button></div>
+      <div class="widget latest-posts">
+        <header>
+          <h3 class="h6">Latest Posts</h3>
+        </header>
+        <div  *ngFor="let b of blogList" class="blog-posts"><a href="#">
+          <div class="item d-flex align-items-center">
+            <div class="image"><img src="{{b.imageLink}}" alt="..." class="img-fluid"></div>
+            <div class="title"><strong>{{b.titele}}</strong></div>
+          </div>
+        </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+</body>
+</html>
+
+      <!-- ici code encore d'update
+          <div class="widget search">
+           <div> <button class="positive ui button" routerLink="/blogPost">Add a Post</button></div>
+            <header>
+              <h3 class="h6">Search the blog</h3>
+            </header>
+            <form action="" class="search-form">
+              <div class="form-group">
+                <input type="search" placeholder="What are you looking for?">
+                <button type="submit" class="submit"><i class="icon-search"></i></button>
+              </div>
+            </form>
+          </div>-->
+      <!-- -->
+      <!--
+      <div class="widget tags">
+        <header>
+          <h3 class="h6">Tags</h3>
+        </header>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#" class="tag">#Business</a></li>
+          <li class="list-inline-item"><a href="#" class="tag">#Technology</a></li>
+          <li class="list-inline-item"><a href="#" class="tag">#Fashion</a></li>
+          <li class="list-inline-item"><a href="#" class="tag">#Sports</a></li>
+          <li class="list-inline-item"><a href="#" class="tag">#Economy</a></li>
+        </ul>
+      </div>-->
+
+
+
+

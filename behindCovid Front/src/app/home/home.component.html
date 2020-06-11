@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+
+<!-- -->
+<section style="background: url(assets/img/covid.jpg); background-size: cover; background-position: center center" class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <h1>COVID-19 is just a virus shall pass by time</h1><a href="#" class="hero-link"><h2>Please be kind. Look after yourself, your family, friends, and neighbors, and your country. Take care</h2></a>
+      </div>
+    </div><a href=".divider" class="continue link-scroll"><i class="fa fa-long-arrow-down"></i> Scroll Down</a>
+  </div>
+</section>
+<!-- Intro -->
+<section class="intro" style="background: url(assets/img/ff.jpg); background-size: cover; background-position: center bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2 class="h3">introduction </h2>
+        <p class="text-big" style="color: black">Small <strong>introduction</strong> about <strong>COVID-19: </strong>Coronaviruses are a family of viruses that cause illnesses such as respiratory diseases of gastrointestinal diseases. The World Health Organisation (WHO) has declared the coronavirus disease 2019 (COVID-19) a world pandemic .</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Latest Posts -->
+<section class="latest-posts">
+  <div class="container">
+    <header>
+      <h2>Latest from the blog</h2>
+    </header>
+    <div class="row">
+      <!--  this part i use splice just to take just 3  post -->
+      <div *ngFor="let lst of blogList.splice(1, blogList.length)" class="post col-md-4">
+        <div class="post-thumbnail"><a routerLink="/blog"><img src="{{lst.imageLink}}" alt="..." class="img-fluid"></a></div>
+        <div class="post-details">
+          <div class="post-meta d-flex justify-content-between">
+            <div class="date">{{lst.date}}</div>
+            <div class="category"><a >{{lst.blogeType}}</a></div>
+          </div><a routerLink="/blog">
+          <h3 class="h4">{{lst.titele}}</h3></a>
+          <p class="text-muted">{{lst.content}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Divider Section-->
+<section style="background: url(../../assets/img/zz.jpg); background-size: cover; background-position: center bottom" class="divider">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h4 style="color:black;">Standard recommendations to prevent the spread of COVID-19 include frequent cleaning of hands using alcohol-based hand rub or soap and water; covering the nose and mouth with a flexed elbow or disposable tissue when coughing and sneezing; and avoiding close contact with anyone that has a fever and cough.</h4><a href=".gallery" class="hero-link fa fa-angle-double-down" style="color: darkgreen">be save and do this step</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Gallery Section-->
+<section class="gallery no-padding">
+  <div class="row">
+    <div class="mix col-lg-3 col-md-3 col-sm-6">
+      <div class="item"><a href="assets/img/stayhome.png" data-fancybox="gallery" class="image"><img src="assets/img/stayhome.png" alt="..." class="img-fluid">
+        <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+    </div>
+    <div class="mix col-lg-3 col-md-3 col-sm-6">
+      <div class="item"><a href="assets/img/mask.jpg" data-fancybox="gallery" class="image"><img src="assets/img/mask.jpg" alt="..." class="img-fluid">
+        <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+    </div>
+    <div class="mix col-lg-3 col-md-3 col-sm-6">
+      <div class="item"><a href="assets/img/hands%20wash.png" data-fancybox="gallery" class="image"><img src="assets/img/hands%20wash.png" alt="..." class="img-fluid">
+        <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+    </div>
+    <div class="mix col-lg-3 col-md-3 col-sm-6">
+      <div class="item"><a href="assets/img/keepdistance.jpg" data-fancybox="gallery" class="image"><img src="assets/img/keepdistance.jpg" alt="..." class="img-fluid">
+        <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+</body>
+
+</html>
+
